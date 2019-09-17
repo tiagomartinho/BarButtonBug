@@ -8,8 +8,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        initRootViewController()
 //        initNavigationRootViewController()
-        initRootSplitViewController()
+//        initRootSplitViewController()
 //        initRootSplitViewControllerProgramatically()
+        initRootSplitViewControllerProgramaticallyAll()
         return true
     }
     
@@ -44,6 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController = storyboard.instantiateViewController(withIdentifier: "NavigationRootViewControllerIdentifier")
         splitVC.viewControllers = [rootViewController]
+        window?.rootViewController = splitVC
+        window?.makeKeyAndVisible()
+    }
+    
+    func initRootSplitViewControllerProgramaticallyAll() {
+        window = UIWindow()
+        let splitVC = UISplitViewController()
+        let master = UINavigationController(rootViewController: RootViewController())
+        let detail = UINavigationController(rootViewController: RootViewController())
+        splitVC.viewControllers = [master, detail]
         window?.rootViewController = splitVC
         window?.makeKeyAndVisible()
     }
