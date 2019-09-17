@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  BarButtonBug
-//
-//  Created by Martinho on 17/09/2019.
-//  Copyright © 2019 tm. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -13,29 +5,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        initRootViewController()
+//        initNavigationRootViewController()
+        initRootSplitViewController()
+//        initRootSplitViewControllerProgramatically()
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    func initRootViewController() {
+        window = UIWindow()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "RootViewControllerIdentifier")
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    
+    func initNavigationRootViewController() {
+        window = UIWindow()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "NavigationRootViewControllerIdentifier")
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    func initRootSplitViewController() {
+        window = UIWindow()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "RootSplitViewController")
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    func initRootSplitViewControllerProgramatically() {
+        window = UIWindow()
+        let splitVC = UISplitViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootViewController = storyboard.instantiateViewController(withIdentifier: "NavigationRootViewControllerIdentifier")
+        splitVC.viewControllers = [rootViewController]
+        window?.rootViewController = splitVC
+        window?.makeKeyAndVisible()
     }
-
-
 }
-

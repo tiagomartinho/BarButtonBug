@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA544B792330C7BE00D85EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA544B782330C7BE00D85EA1 /* AppDelegate.swift */; };
-		EA544B7B2330C7BE00D85EA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA544B7A2330C7BE00D85EA1 /* ViewController.swift */; };
+		EA544B7B2330C7BE00D85EA1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA544B7A2330C7BE00D85EA1 /* RootViewController.swift */; };
 		EA544B7E2330C7BE00D85EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA544B7C2330C7BE00D85EA1 /* Main.storyboard */; };
 		EA544B802330C7BF00D85EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA544B7F2330C7BF00D85EA1 /* Assets.xcassets */; };
 		EA544B832330C7BF00D85EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA544B812330C7BF00D85EA1 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		EA544B752330C7BE00D85EA1 /* BarButtonBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarButtonBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA544B782330C7BE00D85EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA544B7A2330C7BE00D85EA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA544B7A2330C7BE00D85EA1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EA544B7D2330C7BE00D85EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA544B7F2330C7BF00D85EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA544B822330C7BF00D85EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,13 +55,21 @@
 			isa = PBXGroup;
 			children = (
 				EA544B782330C7BE00D85EA1 /* AppDelegate.swift */,
-				EA544B7A2330C7BE00D85EA1 /* ViewController.swift */,
+				EA544B7A2330C7BE00D85EA1 /* RootViewController.swift */,
 				EA544B7C2330C7BE00D85EA1 /* Main.storyboard */,
+				EA544B8A2330C8DA00D85EA1 /* Supporting Files */,
+			);
+			path = BarButtonBug;
+			sourceTree = "<group>";
+		};
+		EA544B8A2330C8DA00D85EA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				EA544B7F2330C7BF00D85EA1 /* Assets.xcassets */,
 				EA544B812330C7BF00D85EA1 /* LaunchScreen.storyboard */,
 				EA544B842330C7BF00D85EA1 /* Info.plist */,
 			);
-			path = BarButtonBug;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA544B7B2330C7BE00D85EA1 /* ViewController.swift in Sources */,
+				EA544B7B2330C7BE00D85EA1 /* RootViewController.swift in Sources */,
 				EA544B792330C7BE00D85EA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +289,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BarButtonBug/Info.plist;
+				DEVELOPMENT_TEAM = 4C34FT6ABU;
+				INFOPLIST_FILE = "BarButtonBug/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +307,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BarButtonBug/Info.plist;
+				DEVELOPMENT_TEAM = 4C34FT6ABU;
+				INFOPLIST_FILE = "BarButtonBug/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
